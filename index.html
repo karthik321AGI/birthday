@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <audio id="bgm" src="Darling.mp3" autoplay loop></audio>
+    <audio id="bgm" src="Darling.mp3" loop></audio>
 
     <img src="ZUiY.gif" alt="stars" class="star">
     <img src="5l03.gif" alt="ballon" class="ballon">
@@ -55,6 +55,20 @@
     </div>
 
     <img src="4SHX.gif" alt="cat" class="cat">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgm');
+            let isPlaying = false;
+
+            document.addEventListener('click', function() {
+                if (!isPlaying) {
+                    audio.play();
+                    isPlaying = true;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
